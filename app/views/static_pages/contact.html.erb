@@ -34,15 +34,16 @@
         </form>
 
         <div id="messageDisplay"></div>
-
-        <div class="alert alert-info d-none" role="alert"></div> </div>
+        <div class="alert alert-info d-none" role="alert"></div>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("contactForm").addEventListener("submit", function(event) {
                 event.preventDefault(); 
-                document.querySelector(".alert").classList.remove("d-none");
-                document.querySelector(".alert").innerHTML = "Thank you for your message, we will contact you soon.";
+                var alertElement = document.querySelector(".alert");
+                alertElement.classList.remove("d-none");
+                alertElement.innerHTML = "Thank you for your message, we will contact you soon.";
             });
         });
     </script>
